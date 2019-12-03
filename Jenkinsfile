@@ -23,6 +23,7 @@ pipeline {
                 sh 'mvn -version'
                 sh 'ls -latr'
                 sh 'mvn clean '
+                sh 'mvn install '
             }
 
          }
