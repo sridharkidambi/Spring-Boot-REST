@@ -35,13 +35,14 @@ pipeline {
       }
 
       stage('Build image & upload') {
-
-                   steps {
+                 steps {
                      script {
                      def customImage = docker.build("sridharkidambi/skimages")
+                     def customImage = docker.build("sridharkidambi/skimages")
+                     customImage.push()
                      }
 
-                   }
+                 }
 
 
       }
