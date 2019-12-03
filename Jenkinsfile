@@ -36,16 +36,10 @@ pipeline {
 
       stage('Build image & upload') {
 
-                     steps {
-
                      git 'https://github.com/sridharkidambi/Spring-Boot-REST'
+                     def customImage = docker.build("sridharkidambi/skimages")
 
-                        docker.withRegistry('https://registry.hub.docker.com/','dockerhub'){
-                            def customImage = docker.build("sridharkidambi/skimages")
-                            customImage.push()
-                        }
 
-                     }
       }
   }
 
