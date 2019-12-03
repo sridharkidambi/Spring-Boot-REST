@@ -40,8 +40,8 @@ pipeline {
 
                      git 'https://github.com/sridharkidambi/Spring-Boot-REST'
 
-                        docker.withRegistry('https://hub.docker.com/','dockerhub_cred'){
-                            def customImage=docker.build("sridharkidambi/skimages")
+                        docker.withRegistry('https://registry.hub.docker.com/','dockerhub'){
+                            def customImage = docker.build("sridharkidambi/skimages")
                             customImage.push()
                         }
 
