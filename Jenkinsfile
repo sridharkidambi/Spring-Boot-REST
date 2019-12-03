@@ -20,6 +20,8 @@ pipeline {
 
          }
 
+      }
+
       stage('Unit Test') {
 
 
@@ -49,6 +51,7 @@ pipeline {
                             }
 
                      }
-       }
-   }
+      }
+  }
+
 }
