@@ -21,6 +21,8 @@ pipeline {
 
             withMaven(maven: 'mvn3_6'){
                 sh 'mvn -version'
+                sh 'ls -latr'
+                sh 'javac -version'
             }
 
          }
