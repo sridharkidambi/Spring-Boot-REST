@@ -9,8 +9,10 @@ pipeline {
    stages {
 
     stage('Checkout') {
+         steps {
+        git 'https://github.com/sridharkidambi/Spring-Boot-REST'
 
-        git 'https://github.com/sridharkidambi/Spring-Boot-REST.git'
+        }
        }
       stage('Build') {
 
