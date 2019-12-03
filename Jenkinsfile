@@ -7,13 +7,18 @@ pipeline {
    //}
 
    stages {
+
+    stage('Checkout') {
+
+        git 'https://github.com/sridharkidambi/Spring-Boot-REST.git'
+       }
       stage('Build') {
 
 
          steps {
 
             withMaven(maven: 'mvn3_6'){
-                sh 'mvn clean install -e -X'
+                sh 'mvn clean install  -X'
             }
 
          }
