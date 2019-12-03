@@ -38,9 +38,7 @@ pipeline {
 
                      steps {
 
-                        withMaven(maven: 'mvn3_6'){
-                            sh 'mvn clean install '
-                        }
+                     git 'https://github.com/sridharkidambi/Spring-Boot-REST'
 
                         docker.withRegistry('https://hub.docker.com/','dockerhub_cred'){
                             def customImage=docker.build("sridharkidambi/skimages")
