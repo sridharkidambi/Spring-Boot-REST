@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: javaapi
+  labels:
+    app: javaapi
+spec:
+  containers:
+    - name: javaapi
+      image: sridharkidambi/skimages:latest
+      ports:
+        - containerPort: 8080
