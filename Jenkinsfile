@@ -49,8 +49,7 @@ pipeline {
       stage('Deploy to K8s') {
                        steps {
                           script {
-                           sh 'ls -latr'
-
+                           sh 'kubectl apply -f . '
                           }
 
                        }
