@@ -49,7 +49,8 @@ pipeline {
       stage('Deploy to K8s') {
                        steps {
                           script {
-                           sh 'kubectl apply -f . '
+                            sh 'kubectl version --short --client'
+                            sh 'kubectl apply -f .'
                           }
 
                        }
