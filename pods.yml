@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: javaapi
+  name: nodeappsk1
   labels:
-    app: javaapi
+    app: nodeappsk1
 spec:
   containers:
-    - name: javaapi
+    - name: nodeappsk1
       image: sridharkidambi/skimages:latest
       ports:
         - containerPort: 8080
