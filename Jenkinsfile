@@ -49,6 +49,8 @@ pipeline {
       stage('Deploy to K8s') {
                        steps {
                           script {
+                            sh 'aws-iam-authenticator help'
+                            sh 'aws eks --region us-east-1 update-kubeconfig --name EKS-cluster-pravin'
                             sh 'kubectl version --short --client'
                             sh 'kubectl apply -f .'
                           }
