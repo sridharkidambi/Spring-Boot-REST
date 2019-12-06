@@ -50,7 +50,7 @@ pipeline {
                        steps {
                           script {
                            sh 'ls -latr'
-                           # sh 'kubectl apply -f  Spring-Boot-REST/ '
+
                           }
 
                        }
