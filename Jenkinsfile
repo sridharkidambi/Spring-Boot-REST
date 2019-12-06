@@ -49,7 +49,8 @@ pipeline {
       stage('Deploy to K8s') {
                        steps {
                           script {
-                           sh 'kubectl apply -f  Spring-Boot-REST/ '
+                           sh 'ls -latr'
+                           # sh 'kubectl apply -f  Spring-Boot-REST/ '
                           }
 
                        }
