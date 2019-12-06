@@ -49,10 +49,7 @@ pipeline {
       stage('Deploy to K8s') {
                        steps {
                           script {
-                           def customImage = docker.build("sridharkidambi/skimages")
-                           docker.withRegistry('https://registry.hub.docker.com/','dockerhub'){
-                              customImage.push()
-                            }
+                           sh 'kubectl apply -f  Spring-Boot-REST/ '
                           }
 
                        }
