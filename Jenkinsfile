@@ -82,11 +82,11 @@ pipeline {
                                 sh 'aws configure set aws_access_key_id ${JENKINS_ACCESS_KEY_ID}'
                                 sh 'aws configure set aws_secret_access_key ${JENKINS_SECRET_ACCESS_KEY}'
                                 sh 'aws configure set default.region ${DEFAULT_REGION}'
-                                sh 'ssh ec2-user@{JUMP_SERVER_IP} aws eks --region us-east-1 update-kubeconfig --name ${ECS_CLUSTER_NAME}'
-                                sh 'ssh ec2-user@{JUMP_SERVER_IP} ls -latr'
-                                sh 'ssh ec2-user@{JUMP_SERVER_IP} kubectl apply -f .'
+                                sh 'ssh ec2-user@${JUMP_SERVER_IP} aws eks --region us-east-1 update-kubeconfig --name ${ECS_CLUSTER_NAME}'
+                                sh 'ssh ec2-user@${JUMP_SERVER_IP} ls -latr'
+                                sh 'ssh ec2-user@${JUMP_SERVER_IP} kubectl apply -f .'
                                 }catch(error){
-                                    sh 'ssh ec2-user@{JUMP_SERVER_IP} kubectl create -f .'
+                                    sh 'ssh ec2-user@${JUMP_SERVER_IP} kubectl create -f .'
                                 }
                             }
                           }
