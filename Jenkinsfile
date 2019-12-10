@@ -79,6 +79,8 @@ pipeline {
                             sh "scp -o StrictHostKeyChecking=no pods.yml services.yml  ec2-user@${JUMP_SERVER_IP}:/home/ec2-user/"
                             script {
                                 try{
+                                sh 'rm -rf  ~/.aws/credentials'
+                                sh 'rm -rf  ~/.aws/config'
                                 sh 'aws configure set aws_access_key_id ${JENKINS_ACCESS_KEY_ID}'
                                 sh 'aws configure set aws_secret_access_key ${JENKINS_SECRET_ACCESS_KEY}'
                                 sh 'aws configure set default.region ${DEFAULT_REGION}'
