@@ -7,7 +7,7 @@ pipeline {
           description: 'ECS_CLUSTER_NAME')
 
           string(name: 'JUMP_SERVER_IP',
-          defaultValue: '3.86.254.81',
+          defaultValue: '54.210.132.148',
           description: 'JUMP_SERVER_IP')
 
           string(name: 'JENKINS_ACCESS_KEY_ID',
