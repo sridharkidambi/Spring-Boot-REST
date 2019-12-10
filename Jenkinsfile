@@ -72,6 +72,18 @@ pipeline {
                  }
       }
 
+      stage('Sonar ') {
+
+
+                         steps {
+
+                            withMaven(maven: 'mvn3_6'){
+                                sh 'mvn sonar:sonar -Dsonar.projectKey=Springboottest -Dsonar.host.url=http://3.90.174.155:9000 -Dsonar.login=dbf342f2b5fb39244fa42b45b476e4f737d3f2bc'
+                            }
+
+                         }
+      }
+
       stage('Deploy to K8s') {
 
                        steps {
