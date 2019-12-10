@@ -3,7 +3,7 @@ pipeline {
 
       parameters{
           string(name: 'ECS_CLUSTER_NAME',
-          defaultValue: 'EKS-cluster-pravin',
+          defaultValue: 'terraform-eks-demo',
           description: 'ECS_CLUSTER_NAME')
 
           string(name: 'JUMP_SERVER_IP',
@@ -11,11 +11,11 @@ pipeline {
           description: 'JUMP_SERVER_IP')
 
           string(name: 'JENKINS_ACCESS_KEY_ID',
-          defaultValue: 'AKIAXXFZRLIBYHFAR3A2',
+          defaultValue: 'JENKINS_ACCESS_KEY_ID',
           description: 'JENKINS_ACCESS_KEY_ID')
 
-          password(name: 'JENKINS_SECRET_ACCESS_KEY',
-          defaultValue: 'X1JZ/DjO9mh5FI2SLBIf1Dh6NaDDF+T/1V/4QYgQ',
+          password(name: 'JENKINS_ACCESS_KEY_ID',
+          defaultValue: 'JENKINS_ACCESS_KEY_ID',
           description: 'JENKINS_SECRET_ACCESS_KEY')
 
           string(name: 'DEFAULT_REGION',
