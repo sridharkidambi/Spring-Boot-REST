@@ -58,6 +58,19 @@ pipeline {
 
                }
       }
+        stage('Sonar ') {
+
+
+                       steps {
+
+                          withMaven(maven: 'mvn3_6'){
+                              sh 'mvn clean verify-P sonar -Dsonar.host.url=http://3.90.174.155:9000/  -Dsonar.login=a31e930cf04c25477114ccd3378953229213d38e'
+                          }
+
+                       }
+         }
+
+
 
       stage('Build image & upload') {
                  steps {
