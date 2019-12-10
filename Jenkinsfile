@@ -14,8 +14,8 @@ pipeline {
           defaultValue: 'JENKINS_ACCESS_KEY_ID',
           description: 'JENKINS_ACCESS_KEY_ID')
 
-          password(name: 'JENKINS_ACCESS_KEY_ID',
-          defaultValue: 'JENKINS_ACCESS_KEY_ID',
+          password(name: 'JENKINS_SECRET_ACCESS_KEY',
+          defaultValue: 'JENKINS_SECRET_ACCESS_KEY',
           description: 'JENKINS_SECRET_ACCESS_KEY')
 
           string(name: 'DEFAULT_REGION',
