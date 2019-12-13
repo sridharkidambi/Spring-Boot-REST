@@ -15,11 +15,11 @@ public class PersonController {
 	
 	@RequestMapping("/")
 	public String healthCheck() {
-		return "OK-SK";
+		return "OK-Demo";
 	}
 	
 	@RequestMapping("/person/get")
-	public Person getPerson(@RequestParam(name="name", required=false, defaultValue="Unknown") String name) {
+	public Person getPerson(@RequestParam(name="name", required=false, defaultValue="Wipro-COE") String name) {
 		person.setName(name);
 		return person;
 	}
