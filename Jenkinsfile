@@ -10,6 +10,10 @@ pipeline {
           defaultValue: '54.210.132.148',
           description: 'JUMP_SERVER_IP')
 
+          string(name: 'SONAR_IP',
+          defaultValue: '54.210.132.148',
+          description: 'JUMP_SERVER_IP')
+
           string(name: 'JENKINS_ACCESS_KEY_ID',
           defaultValue: 'JENKINS_ACCESS_KEY_ID',
           description: 'JENKINS_ACCESS_KEY_ID')
@@ -64,7 +68,7 @@ pipeline {
                  steps {
 
                             withMaven(maven: 'mvn3_6'){
-                                sh 'mvn sonar:sonar -Dsonar.projectKey=Springboottest -Dsonar.host.url=http://3.90.174.155:9000 -Dsonar.login=dbf342f2b5fb39244fa42b45b476e4f737d3f2bc -Dsonar.java.binaries=target/classes'
+                                sh 'mvn sonar:sonar -Dsonar.projectKey=Springboottest -Dsonar.host.url=http://${SONAR_IP}:9000 -Dsonar.login=dbf342f2b5fb39244fa42b45b476e4f737d3f2bc -Dsonar.java.binaries=target/classes'
                             }
 
                        }
