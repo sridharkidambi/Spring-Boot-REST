@@ -7,7 +7,7 @@ pipeline {
           description: 'ECS_CLUSTER_NAME')
 
           string(name: 'JUMP_SERVER_IP',
-          defaultValue: '54.210.132.148',
+          defaultValue: '54.204.69.201',
           description: 'JUMP_SERVER_IP')
 
           string(name: 'SONAR_IP',
