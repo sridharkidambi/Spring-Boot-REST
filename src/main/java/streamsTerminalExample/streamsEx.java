@@ -1,3 +1,5 @@
+package streamsTerminalExample;
+
 import data.Student;
 import data.StudentDataBase;
 
