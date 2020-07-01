@@ -31,6 +31,7 @@ public class Student {
         this.gender = gender;
         this.noteBooks = noteBooks;
         this.activities = activities;
+        this.bike=Optional.empty();
     }
 
     public int getNoteBooks() {
@@ -48,6 +49,7 @@ public class Student {
         this.gpa = gpa;
         this.gender = gender;
         this.activities = activities;
+        this.bike= Optional.ofNullable(new Bike("Honda","Shine"));
     }
 
     public Student(String s) {
